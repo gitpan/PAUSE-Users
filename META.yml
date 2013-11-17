@@ -1,0 +1,29 @@
+---
+abstract: "interface to PAUSE's users file (00whois.xml)"
+author:
+  - 'Neil Bowers <neil@bowers.com>'
+build_requires:
+  Test::More: 0.88
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.132830'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: PAUSE-Users
+requires:
+  File::HomeDir: 0
+  File::Spec::Functions: 0
+  HTTP::Tiny: 0
+  Moo: 0
+  autodie: 0
+  feature: 0
+  perl: v5.14.0
+  strict: 0
+  warnings: 0
+resources:
+  homepage: https://github.com/neilbowers/PAUSE-Users
+  repository: https://github.com/neilbowers/PAUSE-Users.git
+version: 0.01
