@@ -1,6 +1,6 @@
 package PAUSE::Users::UserIterator;
 {
-  $PAUSE::Users::UserIterator::VERSION = '0.01';
+  $PAUSE::Users::UserIterator::VERSION = '0.02';
 }
 
 use strict;
@@ -39,7 +39,16 @@ sub next_user
         next LINE unless $inuser;
 
         if (m!<([a-zA-Z0-6_]+)>(.*?)</\1>!) {
-            push(@fields, $1 => $2);
+            my ($field, $value) = ($1, $2);
+
+            # <type>author</type> specified a user account
+            # <type>list</type> is a mailing list; we skip those
+            if ($field eq 'type') {
+                $inuser = 0 if $value eq 'list';
+                next LINE;
+            }
+
+            push(@fields, $field => $value);
         }
 
         if (m!</cpanid>!) {
