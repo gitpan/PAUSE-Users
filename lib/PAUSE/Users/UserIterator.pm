@@ -1,6 +1,6 @@
 package PAUSE::Users::UserIterator;
 {
-  $PAUSE::Users::UserIterator::VERSION = '0.02';
+  $PAUSE::Users::UserIterator::VERSION = '0.03';
 }
 
 use strict;

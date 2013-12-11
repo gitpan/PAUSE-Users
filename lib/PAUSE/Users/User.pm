@@ -1,6 +1,6 @@
 package PAUSE::Users::User;
 {
-  $PAUSE::Users::User::VERSION = '0.02';
+  $PAUSE::Users::User::VERSION = '0.03';
 }
 
 use 5.10.0;

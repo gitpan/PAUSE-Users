@@ -1,6 +1,6 @@
 package PAUSE::Users;
 {
-  $PAUSE::Users::VERSION = '0.02';
+  $PAUSE::Users::VERSION = '0.03';
 }
 # ABSTRACT: interface to PAUSE's users file (00whois.xml)
 use strict;
@@ -46,6 +46,8 @@ sub BUILD
 }
 
 1;
+
+=encoding utf8
 
 =head1 NAME
 
@@ -113,8 +115,9 @@ author specified that their email address should not be shared.
 =item has_cpandir
 
 Set to C<1> if the author has a directory on CPAN, and 0 if not.
-This being true means that the author has upload I<something> to CPAN,
-even if they've subsequently deleted it.
+This is only true (1) if the author I<currently> has something on CPAN.
+If you upload a dist then delete it, the dist will be on BackPAN but
+not on CPAN, and C<has_cpandir> will return 0.
 
 =item homepage
 
