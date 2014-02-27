@@ -1,7 +1,5 @@
 package PAUSE::Users;
-{
-  $PAUSE::Users::VERSION = '0.03';
-}
+$PAUSE::Users::VERSION = '0.04';
 # ABSTRACT: interface to PAUSE's users file (00whois.xml)
 use strict;
 use warnings;
@@ -157,6 +155,21 @@ each of which contains details of one PAUSE user:
   
  </cpan-whois>
 
+In addition to all PAUSE users, the underlying file (00whois.xml)
+also contains details of perl.org mailing lists.
+For example, here's the entry for Perl5-Porters:
+
+ <cpanid>
+  <id>P5P</id>
+  <type>list</type>
+  <asciiname>The Perl5 Porters Mailing List</asciiname>
+  <email>perl5-porters@perl.org</email>
+  <info>Mail perl5-porters-subscribe@perl.org</info>
+  <has_cpandir>0</has_cpandir>
+ </cpanid>
+
+All B<list> type entries are ignored by C<PAUSE::Users>.
+
 =head1 NOTES
 
 I started off trying a couple of XML modules, but I was surprised at
@@ -172,6 +185,11 @@ but you have to download it yourself first.
 
 L<Parse::CPAN::Authors> is another module for getting information about
 PAUSE users, but based on C<01.mailrc.txt.gz>.
+
+L<CPAN::Index::API::File::Whois> provides a similar interface to 00whois.xml.
+
+L<CPAN::Search::Author> does a real-time search for CPAN authors
+using L<search.cpan.org|http://search.cpan.org>.
 
 L<PAUSE::Permissions>, L<PAUSE::Packages>.
 
