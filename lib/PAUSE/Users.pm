@@ -1,5 +1,5 @@
 package PAUSE::Users;
-$PAUSE::Users::VERSION = '0.04';
+$PAUSE::Users::VERSION = '0.05';
 # ABSTRACT: interface to PAUSE's users file (00whois.xml)
 use strict;
 use warnings;
@@ -190,6 +190,9 @@ L<CPAN::Index::API::File::Whois> provides a similar interface to 00whois.xml.
 
 L<CPAN::Search::Author> does a real-time search for CPAN authors
 using L<search.cpan.org|http://search.cpan.org>.
+
+L<CPAN::Source> fetches 4 of the PAUSE indices and lets you query an aggregation
+of the data they contain.
 
 L<PAUSE::Permissions>, L<PAUSE::Packages>.
 

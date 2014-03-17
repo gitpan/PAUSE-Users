@@ -26,4 +26,4 @@ requires:
 resources:
   homepage: https://github.com/neilbowers/PAUSE-Users
   repository: https://github.com/neilbowers/PAUSE-Users.git
-version: 0.04
+version: 0.05
