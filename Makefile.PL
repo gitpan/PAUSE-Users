@@ -21,10 +21,8 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "PAUSE::Users",
   "PREREQ_PM" => {
-    "File::HomeDir" => 0,
-    "File::Spec::Functions" => 0,
-    "HTTP::Tiny" => 0,
     "Moo" => 0,
+    "MooX::Role::CachedURL" => "0.03",
     "autodie" => 0,
     "feature" => 0,
     "strict" => 0,
@@ -33,7 +31,7 @@ my %WriteMakefileArgs = (
   "TEST_REQUIRES" => {
     "Test::More" => "0.88"
   },
-  "VERSION" => "0.05",
+  "VERSION" => "0.06",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -41,10 +39,8 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
-  "File::HomeDir" => 0,
-  "File::Spec::Functions" => 0,
-  "HTTP::Tiny" => 0,
   "Moo" => 0,
+  "MooX::Role::CachedURL" => "0.03",
   "Test::More" => "0.88",
   "autodie" => 0,
   "feature" => 0,

@@ -11,3 +11,4 @@ lib/PAUSE/Users/User.pm
 lib/PAUSE/Users/UserIterator.pm
 t/00whois-mini.xml
 t/01-user-iterator.t
+t/02-live-user-iterator.t
